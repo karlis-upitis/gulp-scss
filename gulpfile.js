@@ -1,42 +1,3 @@
-# gulp-scss
-Gulp + SCSS Boilerplate. Small example to play with.
-
-
-# Requirements
-- [node](http://nodejs.org)
-- [gulp.js](http://gulpjs.com)
-
-
-# Installation
-
-To install all dependencies (specified in package.json)
-```bash
-npm install
-```
-
-# Usage
-
-## Basic Usage
-
-When all dependencies are installed execute `gulp` command in terminal. Now you are ready to edit `.html` and `.scss` files and play with this example. You don't need a server doubble click `index.html` and everything should work fine.
-
-## How it works?
-
-### Configuration
-
-When `npm install` command is executed it installs dependencies which are specified in `package.json` file (an `node_modules` folder will be created).
-```javascript
-{
-  "devDependencies": {
-    "gulp": "~3.9.0",
-    "gulp-sass": "^2.2.0"
-  }
-}
-
-```
-
-`gulp` command executes `gulpfile.js`.
-```javascript
 /*-------------------------------------
 	Register NPM Modules
 -------------------------------------*/
@@ -49,7 +10,7 @@ var gulp = require('gulp'),
 -------------------------------------*/
 gulp.task('css', function () {
 	// take files with extension .scss from /scss folder
-	return gulp.src('/scss/*.scss')
+	return gulp.src('scss/*.scss')
 
 		// use scss module on it
 		.pipe(sass({
@@ -66,7 +27,7 @@ gulp.task('css', function () {
         	}).on('error', sass.logError)
 		)
 		// return into css folder
-		.pipe(gulp.dest('/css/style.css'))
+		.pipe(gulp.dest('css/'))
 });
 
 
@@ -88,4 +49,3 @@ gulp.task('watch', function() {
 // > gulp
 // execute css & watch tasks.
 gulp.task('default', ['css', 'watch']);
-```

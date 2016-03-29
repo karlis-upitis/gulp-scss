@@ -1,0 +1,104 @@
+// *************************************
+//
+//   Main - Playground
+//   FEEL FREE TO DELETE THIS
+//
+// *************************************
+
+// will import styles from
+// some-module.scss & another-module.scss
+@import "some-module";
+@import "another-module";
+
+/*-------------------------------------
+	variables
+-------------------------------------*/
+// store colors
+$box-background: steelblue;
+$color-black: #000000;
+// store units;
+$column-count: 3;
+$column-width: 100%/$column-count;
+
+
+
+/*-------------------------------------
+	nesting (simple)
+-------------------------------------*/
+// the old css way to select elements is
+.article{
+}
+.article .article__header{
+}
+.article .article__header .article__author{
+}
+
+// the new way
+.article{
+	.article__header{
+		.article__author{
+		
+		}
+	}
+}
+
+// or
+.article{
+	&__header{
+
+	}
+	&__author{
+
+	}
+}
+
+
+
+/*-------------------------------------
+	nesting (BEM SYNTAX)
+-------------------------------------*/
+
+.article{
+	width: $column-width;
+
+	&__header{
+		background-color: rgba(lightgray, .3);
+	}
+		&__title{
+
+		}
+		&__info{
+			display: block;
+			padding: 10px;
+			overflow: hidden;
+		}
+
+		&__date{
+			display: inline-block;
+		}
+		&__author{
+			display: inline-block;
+			margin-left: 20px;
+		}
+
+	&__content{
+		h1{
+
+		}
+		h2{
+
+		}
+		p{
+
+		}
+		blockquote{
+			p{
+
+			}
+			footer{
+
+			}
+		}
+	}
+}
+

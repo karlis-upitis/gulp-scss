@@ -1,0 +1,6 @@
+/* read README.md file */
+.article:before{
+	content: "You haven't compiled the CSS. \A Please, read the Instructions!";
+	white-space: pre; /* or pre-wrap */
+	font-size: 60px;
+}
