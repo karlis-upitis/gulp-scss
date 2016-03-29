@@ -18,7 +18,7 @@ npm install
 
 ## Basic Usage
 
-When all dependencies are installed execute `gulp` command in terminal. Now you are ready to edit `.html` and `.scss` files and play with this example. You don't need a server doubble click `index.html` and everything should work fine.
+When all dependencies are installed execute `gulp` command in terminal. Now you are ready to edit `.html` and `.scss` files and play with this example. You don't need a server to run this example. Just open `index.html` file in your favorite browser.
 
 ## How it works?
 
